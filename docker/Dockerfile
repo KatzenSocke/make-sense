@@ -1,6 +1,6 @@
-FROM node:16.16.0
+FROM node:20-alpine
 
-RUN apt-get update && apt-get -y install git && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache git
 
 COPY ./ /make-sense
 
